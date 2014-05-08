@@ -21,4 +21,5 @@ end
 
 group :test do
 	gem 'factory_girl_rails', '~> 4.4.1'
+	gem 'simplecov', '~> 0.8.2'
 end
