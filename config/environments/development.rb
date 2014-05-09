@@ -1,4 +1,10 @@
 Rails.application.configure do
+
+  # add awesome font for asset pipeline
+  # http://www.jaynathan.org/2013/02/using-font-awesome-with-rails-asset-pipeline/
+  config.assets.paths << Rails.root.join(‘app’, ‘assets’, ‘fonts’)
+  config.assets.precompile += %w(.svg .eot .woff .ttf)
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

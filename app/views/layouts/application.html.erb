@@ -7,9 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="welcome">Welcome, <%= current_user.email %></p>
+<header class="container">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <%= link_to 'todo The TDD Way', root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="pull-right right-buttons">
+    	<p class="welcome">Welcome, <%= current_user.email %></p>
+      <%# if user_signed_in? %>
+        <%#= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
+      <%# end %>
+    </div>
+  </nav>
+</header>
 
-<%= yield %>
-
+<div class="container">
+	<div class="row">
+		<%= yield %>
+	</div>
+</div>
 </body>
 </html>
