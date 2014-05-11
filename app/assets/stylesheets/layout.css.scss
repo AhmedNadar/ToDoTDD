@@ -56,3 +56,8 @@ background-color: #1a2125;
 .list-group-item {
 	background-color: #f0faff;
 }
+.completed span{
+	text-decoration: line-through;
+	color: #cccccc !important;
+	font-style: italic;
+}

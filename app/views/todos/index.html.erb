@@ -4,7 +4,13 @@
 		<% @todos.each do |todo| %>
 	  	<li class="todo<%= ' completed' if todo.completed_at? %> list-group-item">
 				<span><%= todo.description %></span>
-				<span class="label label-info pull-right"><%= link_to 'Complete', todo_completion_path(todo), method: :post %></span>
+				<span class="label label-info pull-right">
+					<% if todo.completed_at? == false %> 
+						<%= link_to 'Complete', todo_completion_path(todo), method: :post %>
+					<% else %>
+						<%= 'Done' %>
+					<% end %>
+				</span>
 	  	</li>
 	  <% end%>
 	</ul>

@@ -13,6 +13,7 @@
         <div class="panel-body">
         	<%= form_for :session, url: session_path do |form| %>
 						<div class="col-md-10">
+							<%=	form.label :email_address, class: 'sr-only' %>
 							<%=	form.text_field :email_address, class: "form-control", autofocus: "true", placeholder: 'Sign In to Add to add your todos',  required: "true" %>
 						</div>
 						<%=	form.submit "Sign in", class: 'btn btn-primary' %>

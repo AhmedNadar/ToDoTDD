@@ -9,6 +9,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon"><%= fa_icon "pencil-square-o" %></span>
+				    <%=	f.label :description, class: 'sr-only' %>
 				    <%= f.text_field :description, autofocus: "true", class: "form-control", placeholder: 'What do wanna do?',  required: "true" %>
 							<%#= fa_icon "camera-retro" %>
 					</div>

@@ -12,19 +12,15 @@ feature "Manage todos" do
   scenario "view only my todos" do
   	create(:todo, description: 'Buy some eggs', owner_email: 'not_me@mail.com')
   	sign_in_as "me@mail.com"
-		
 		create_todo_with_description "Buy some milk"
-		
 		user_sees_todo_item "Buy some milk"
     user_does_not_sees_todo_item "Buy some eggs"
   end
 
   scenario "mark todos as complete" do
     sign_in
-   	
    	create_todo_with_description "Buy some milk"
     complete_todo "Buy some milk"
-    
     user_sees_completed_todo_item "Buy some milk"
   end
 
@@ -44,6 +40,7 @@ feature "Manage todos" do
   end
   def user_sees_completed_todo_item(description)
   	expect(page).to have_css 'li.todo.completed', text: description
+    expect(page).to have_content 'Done'
   end
   def user_does_not_sees_todo_item(description)
   	expect(page).not_to have_css 'li.todo', text: description
