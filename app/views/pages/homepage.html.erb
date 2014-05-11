@@ -2,15 +2,23 @@
 	<div class="jumbotron">
 		<h1>The ToDo</h1>
 		<p>Orgnise your time and create todo lists.</p>
-		<p>You can create todos using email only. NO, sign out, edit, delete, </p>
+		<p>You can create todos using email only. NO, sign out, edit or delete, </p>
 		<%#= link_to	"Create Account", new_session_path, class: 'btn btn-primary btn-lg' %>
 	</div>
+		<div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" data-role="description">This is app to manage Todos</h3>
+        </div>
+        <div class="panel-body">
+        	<%= form_for :session, url: session_path do |form| %>
+						<div class="col-md-10">
+							<%=	form.text_field :email_address, class: "form-control", autofocus: "true", placeholder: 'Sign In to Add to add your todos',  required: "true" %>
+						</div>
+						<%=	form.submit "Sign in", class: 'btn btn-primary' %>
+					<% end %>
+        </div>
+      </div>
+    </div>
 </div>
 
-<p data-role="description">This is app to manage Todos</p>
-
-<%= form_for :session, url: session_path do |form| %>
-	<%=	form.label :email_address %>
-	<%=	form.text_field :email_address %>
-	<%=	form.submit "Sign in" %>
-<% end %>

@@ -1,7 +1,58 @@
-body {
-  padding-top: 20px;
-}
+@import url(http://fonts.googleapis.com/css?family=Metamorphous);
+@import url(http://fonts.googleapis.com/css?family=Lemon);
 
+body {
+	font-family: 'Metamorphous', cursive;
+	font-size: 20px;
+  padding-top: 20px;
+  background-color: #232c31;
+  color: #ffffff;
+}
+.navbar-header {
+font-family: Lemon, Arial, serif; 
+font-weight: 400; 
+}
+.navbar-default .navbar-brand {
+color: #ffffff;
+font-size: 25px;
+}
 .navbar .right-buttons {
   margin: 15px 15px 0 0;
+}
+.navbar .right-buttons {
+	color: #1F1B74
+}
+.navbar-default {
+	background-color: #9CD55F;
+	border-color: #D5F3BA;
+}
+.label {
+	color: #E24F0A;
+}
+.label-info {
+background-color: #F1F3BD;
+}
+.label-info a:hover, .label-info  a:focus {
+color: #EE1E0C;
+}
+.container .jumbotron {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+.jumbotron {
+background-color: #1a2125;
+}
+.right-buttons p {
+	font-size: 17px;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #D33913;
+}
+.list-group-item span:first-child {
+	color: #364B57;
+}
+.list-group-item {
+	background-color: #f0faff;
 }

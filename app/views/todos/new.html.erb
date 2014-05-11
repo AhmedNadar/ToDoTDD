@@ -1,35 +1,22 @@
-<%#= form_for @todo do |form| %>
-	<%#= form.label :description %>
-	<%#= form.text_field :description %>
-	<%#= form.submit 'Create todo'  %>
-<%# end %>
 
-
-<div class="col-md-6 col-md-offset-3 panel panel-default">
-	<div class="panel-body">
-		<h2>Create a tood</h2>
-		<%= form_for @todo, html: { class: 'form-horizontal', role: 'form'} do |f| %>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon"><%= fa_icon "pencil-square-o" %></span>
-			    <%= f.text_field :description, autofocus: "true", class: "form-control", placeholder: 'What do wanna do?',  required: "true" %>
-						<%#= fa_icon "camera-retro" %>
-			</div>
-			</div>
-
-<!-- <div class="input-group">
-  <span class="input-group-addon">@</span>
-  <input type="text" class="form-control" placeholder="Username">
-</div> -->
-
-			<div class="form-group">
+<div class="col-md-6 col-md-offset-3">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Create a tood</h3>
+		</div>
+		<div class="panel-body">
+			<%= form_for @todo, html: { class: 'form-horizontal', role: 'form'} do |f| %>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><%= fa_icon "pencil-square-o" %></span>
+				    <%= f.text_field :description, autofocus: "true", class: "form-control", placeholder: 'What do wanna do?',  required: "true" %>
+							<%#= fa_icon "camera-retro" %>
+					</div>
+				</div>
 		    <div class="col-sm-10">
 		      <%= f.submit 'Create todo', class: 'btn btn-primary' %>	
 		    </div>
-		  </div>
-
-
-    	
- 		<% end %>		
-	</div>
+	 		<% end %>		
+		</div>
+	</div>	
 </div>

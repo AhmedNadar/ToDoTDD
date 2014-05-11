@@ -1,11 +1,11 @@
-<div>
-	<ul>
+<div class="col-md-8 col-md-offset-2">
+	<h4><i class="fa fa-list-ul"></i> <%= link_to "Add a new todo", new_todo_path  %></h4>
+	<ul class="list-group">
 		<% @todos.each do |todo| %>
-			<li class="todo<%= ' completed' if todo.completed_at? %>" >
-				<span><%= todo.description %></span> - 
-				<span><%= link_to 'Complete', todo_completion_path(todo), method: :post %></span>
-			</li>
-		<% end	%>
+	  	<li class="todo<%= ' completed' if todo.completed_at? %> list-group-item">
+				<span><%= todo.description %></span>
+				<span class="label label-info pull-right"><%= link_to 'Complete', todo_completion_path(todo), method: :post %></span>
+	  	</li>
+	  <% end%>
 	</ul>
 </div>
-<%= link_to "Add a new todo", new_todo_path  %>

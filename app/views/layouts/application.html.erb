@@ -13,7 +13,7 @@
       <%= link_to 'todo The TDD Way', root_path, class: 'navbar-brand' %>
     </div>
     <div class="pull-right right-buttons">
-    	<p class="welcome">Welcome, <%= current_user.email %></p>
+    	<p class="welcome">Welcome, <%= link_to current_user.email, todos_path %></p>
       <%# if user_signed_in? %>
         <%#= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
       <%# end %>
